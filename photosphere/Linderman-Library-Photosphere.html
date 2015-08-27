@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Linderman Library Photosphere</title>
+		<style>
+			.right{ float: right; }
+		</style>
+	</head>
+	<body>
+		
+		<div id="sphere" style="width: 100%; height: 600px;"></div>
+		
+		<script type="text/javascript" src="http://threejs.org/build/three.min.js"></script>
+		<script async="true" onload="setup();" type="text/javascript" src="../index_files/sphere.js"></script>
+
+		<a href="../images/Linderman_Library.jpg" id="Linderman_Library"></a>
+
+		<script type="text/javascript">
+				function setup(){
+					sphere = new Photosphere(Linderman_Library.getAttribute("href"));
+					sphere.loadPhotosphere(document.getElementById("sphere"));
+					return false;
+				}
+		</script>
+	</body>
+</html>

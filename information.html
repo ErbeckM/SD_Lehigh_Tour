@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+	<title id="title"></title>
+
+	<style type="text/css">
+		body{
+			font-family: Arial,Helvetica,sans-serif;
+			color: white;
+			background-color:#dddcda;
+			height: 100%;
+		}
+		.banner{
+			font-size: 450%;
+			background-color: #502d0e;
+			text-align: center;
+			height: 80px;
+			padding: 10px;
+		}
+		.leftColumn{
+			float: left;
+			width:200px;
+			padding: 10px;
+			margin-right: 10px;
+			margin-top: 10px;
+			background-color: #502d0e;
+			text-align: center;
+		}
+		.rightColumn{
+			float: right;
+			width: 768px;
+			margin-top: 10px;
+			background-color: white;
+			color: black;
+			height: 100%;
+		}
+		.photo{
+			width: 100%;
+			height: 100px;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+		.container{
+			position: relative;
+			background-color: #fff;
+			width: 998px;
+			margin: 12px auto 0px;
+			height: 100%;
+		}
+		.content{
+			height: 100%;
+			background: white;
+		}
+		.list{
+			font-size: 140%;
+
+		}
+
+		li{
+			padding-bottom: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="banner" id="banner">
+			<a href="index.html" title="Campus Map">
+				<img src="images/LehighBadge.jpg" style="float: left;
+				height: 80px; width: 80px;">
+			</a>	
+		</div>
+		<div class="content" id="columns">
+			<div class="leftColumn" id="leftColumn"></div>
+			<div class="rightColumn" id="rightColumn">
+				<ul class="list" id="infoList"></ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery/jquery-
+	2.0.3.min.js"></script>
+	<script>
+		var title = document.getElementById("title");
+		var banner = document.getElementById("banner");
+		var leftColumn = document.getElementById("leftColumn");
+		var infoList = document.getElementById("infoList");
+
+		if(window.location.hash) {
+			var hash = window.location.hash.substring(1);
+			switch(hash){
+				case '0':
+				title.innerHTML = "Packard Lab";
+				banner.innerHTML += "Packard Lab";	
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/Packard_Lab.jpg'>Packard Lab Photosphere";
+				newPhoto.id = "Front";
+				newPhoto.href = "photosphere/Packard-Lab-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);
+				
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "Packard Lab was established in 1929, in honor of James Ward Packard, one of the inventors of the first Packard automobile.";
+				infoList.appendChild(listItem);
+
+				var listItem1 = document.createElement("li");
+				listItem1.innerHTML = "Packard Lab serves as the main headquarters for the P.C. Rossin School of Engineering and Applied Sciences. ";
+				infoList.appendChild(listItem1);
+				break;
+
+				case '1':
+				title.innerHTML = "Linderman Library";
+				banner.innerHTML += "Linderman Library";			
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/Linderman_Library.jpg'>Linderman Library Photosphere";
+				newPhoto.id = "Front";
+				newPhoto.href = "photosphere/Linderman-Library-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);
+				
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "One of the oldest university libraries in the nation, Linderman is a state-of-the-art center for the humanities, and is home to Lucy&#39;s caf&eacute;, a favorite hangout among students. The largest library at Lehigh, Linderman is a blend of beautiful 1878 architectural charm and modern comforts and conveniences.";
+				infoList.appendChild(listItem);
+				
+				var listItem1 = document.createElement("li");
+				listItem1.innerHTML = "Linderman's Lucy's caf&eacute; is a great place to grab a coffee, catch up with a friend, or brainstorm with fellow students on an innovative group project.";
+				infoList.appendChild(listItem1);				
+				break;
+
+				case '2':
+				title.innerHTML = "Goodman Stadium";
+				banner.innerHTML += "Goodman Stadium";		
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/Goodman_Stadium.jpg'>Goodman Stadium Photosphere";
+				newPhoto.href = "photosphere/Goodman-Stadium-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);
+
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "On the other side of South Mountain, Goodman Stadium hosts the oldest football rivalry in the nation, between Lehigh University and Lafayette College.";
+				infoList.appendChild(listItem);
+				
+				var listItem1 = document.createElement("li");
+				listItem1.innerHTML = "A 16,000 capacity stadium, it features a three-tiered press box and limited chair back seating, and locker rooms for home and visiting teams.";
+				infoList.appendChild(listItem1);
+				break;
+
+				case '3':
+				title.innerHTML = "University Center";
+				banner.innerHTML += "University Center";
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/UC_Front_Lawn.jpg'>U.C. Front Lawn Photosphere";
+				newPhoto.href = "photosphere/UC-Front-Lawn-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);
+				
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "Originally built in 1868, the University Center housed a chapel, classrooms, offices, drafting rooms, and dormitories.";
+				infoList.appendChild(listItem);
+				
+				var listItem1 = document.createElement("li");
+				listItem1.innerHTML = "Currently, the U.C. is the hub of campus activity and home to student and faculty dining facilities, a food court, a bank, and several student affairs offices.";
+				infoList.appendChild(listItem1);				
+				break;
+
+				case '4':
+				title.innerHTML = "STEPS";
+				banner.innerHTML += "STEPS";
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/STEPS.jpg'>STEPS Photosphere";
+				newPhoto.href = "photosphere/STEPS-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);
+		
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "The newest and greenest building on campus, STEPS is home to cutting-edge classrooms and labs which facilitate interdisciplinary work in science, technology, environment, and policy and society.";
+				infoList.appendChild(listItem);
+				
+				var listItem1 = document.createElement("li");
+				listItem1.innerHTML = 'Some of the many "green" features within STEPS, include low flush toilets, heat shields to recycle energy from fume hoods, exhaust fans, and a green roof to prevent soil runoff and hold in heat/AC.';
+				infoList.appendChild(listItem1);
+				
+				var listItem2 = document.createElement("li");
+				listItem2.innerHTML = "Outside STEPS there is a petrified tree stone that is over 360 million years old.";
+				infoList.appendChild(listItem2);				
+				break;
+
+				case '5':
+				title.innerHTML = "Taylor Gym";
+				banner.innerHTML += "Taylor Gym";
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/Taylor_Gym.jpg'>Taylor Gym Photosphere";
+				newPhoto.href = "photosphere/Taylor-Gym-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);
+
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "Exercise and de-stress at Taylor Gym which houses a full-service fitness center with two pools, a climbing wall, a sports medicine tower, and basketball, racquetball, and squash courts.";
+				infoList.appendChild(listItem);
+
+				var listItem1 = document.createElement("li");
+				listItem1.innerHTML = "Taylor Gym also houses the Athletics Department and the Roger S. Penske Lehigh Athletics Hall of Fame.";
+				infoList.appendChild(listItem1);				
+				break;
+
+				case '6':
+				title.innerHTML = "Alumni Memorial Building";
+				banner.innerHTML += "Alumni Memorial Building";
+
+				/* Front of Alumni Building */
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/Alumni_Memorial_Front.jpg'>Front Photosphere";
+				newPhoto.href = "photosphere/Alumni-Memorial-Front-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);
+
+				/* Inside of Alumni Building */
+				var newPhoto1 = document.createElement("a");
+				newPhoto1.innerHTML = "<img class='photo' src='thumbnails/Alumni_Memorial_Inside.jpg'>Inside Photosphere";
+				newPhoto1.href = "photosphere/Alumni-Memorial-Inside-Photosphere.html";
+				newPhoto1.title = "Photosphere";
+				leftColumn.appendChild(newPhoto1);
+
+				/* Back of Alumni Building */
+				var newPhoto2 = document.createElement("a");
+				newPhoto2.innerHTML = "<img class='photo' src='thumbnails/Alumni_Memorial_Back.jpg'>Rear Photosphere";
+				newPhoto2.href = "photosphere/Alumni-Memorial-Back-Photosphere.html";
+				newPhoto2.title = "Photosphere";
+				leftColumn.appendChild(newPhoto2);
+				
+
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "The Alumni Memorial Building, designed by Lehigh alumni Theodore G. Visscher and James Lindsey Burley, was built in 1925 to honor the 46 Lehigh alumni who died and the 1,921 who served in World War I.";
+				infoList.appendChild(listItem);
+
+                var listItem1 = document.createElement("li");
+				listItem1.innerHTML = "Alumni Memorial is home to the Office of Admissions and the offices of the President, Provost, Bursar, Registrar, and the Alumni Association.";
+				infoList.appendChild(listItem1);
+
+				var listItem2 = document.createElement("li");
+				listItem2.innerHTML = "It's considered bad luck to step on the university seal engraved in the Leadership Plaza pavestones outside the Alumni Memorial Building.";
+				infoList.appendChild(listItem2);
+				break;
+
+				case '7':
+				title.innerHTML = "Zoellner Arts Center";
+				banner.innerHTML += "Zoellner Arts Center";
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='thumbnails/Zoellner.jpg'>Zoellner Arts Center Photosphere";
+				newPhoto.href = "photosphere/Zoellner-Photosphere.html";
+				newPhoto.title = "Photosphere";
+				leftColumn.appendChild(newPhoto);				
+				
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "This premier performing arts center showcases world-class acts and is home to Lehigh&#39;s music and theatre departments and two art galleries.";
+				infoList.appendChild(listItem);
+				
+				var listItem1 = document.createElement("li");
+				listItem1.innerHTML = "Zoellner Arts Center has had a wide array of performers, including the New York Philharmonic and Itzhak Perlman, the Tuvan throat singers Huun-Huur-Tu and Laurie Anderson, Hubbard Street Dance Chicago, MOMIX, the Aquila Theatre Company, Lily Tomlin, Bernadette Peters and Queen Latifah.";
+				infoList.appendChild(listItem1);
+				
+				break;
+
+				default:
+				title.innerHTML = "Lehigh University";
+				banner.innerHTML += "Lehigh University";	
+
+				var newPhoto = document.createElement("a");
+				newPhoto.innerHTML = "<img class='photo' src='images/LehighBadge.jpg'> Campus Map";
+				newPhoto.id = "Campus Map";
+				newPhoto.href = "index.html";
+				newPhoto.title = "Campus Map";
+				leftColumn.appendChild(newPhoto);
+				
+				var listItem = document.createElement("li");
+				listItem.innerHTML = "Error: You have arrived at this page due to unforeseen errors. Please contact the system administrator for assistance.";
+				infoList.appendChild(listItem);
+				
+				break;
+			}
+			
+			if ($('#leftColumn').height() > $('#rightColumn').height()) {
+				$('#rightColumn').height($('#leftColumn').height());
+			}
+			else{
+				$('#leftColumn').height($('#rightColumn').height());
+			}
+			
+		}
+	</script>
+</body>
+</html>
